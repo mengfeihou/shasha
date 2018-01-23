@@ -1,0 +1,125 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin:0;padding:0;}
+ul,ol,li{list-style:none;}
+a,u{text-decoration:none;}
+b,strong{font-weight:100;}
+i,em{font-style:normal;}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:100;}
+img{display:block;border:0;}
+.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility: hidden;}
+.top{
+	width:100%;
+	height:100px;
+	/*position:relative;*/
+}
+.top img{
+	width:100%;
+	height:100px;
+	cursor:pointer;
+}
+/**/.top span{
+	display:inline-block;
+	height:30px;
+	width:30px;
+	background:rgba(135,135,135,0.3);
+	position:absolute;
+	left:95%;
+	top:10px;
+	font-size:20px;
+	color:rgba(255,255,255,0.7);
+	font-weight:bolder;
+	text-align:center;
+	line-height:30px;
+	cursor:pointer;
+}
+.topnav{
+	width:100%;
+	height:32px;
+	background:#f2f2f2;
+	border-bottom:1px solid #e5e5e5;
+}
+.topwarp{
+	width:84%;
+	margin:0 auto;
+	font-size:12px;
+	line-height:32px;
+}
+.topwarp dl,.topwarp dd,.topwarp dt,.topwarp li{
+	float:left;
+}
+.topwarp ul{
+	float:right;
+}
+.topwarp dt a{
+	display:inline-block;
+	padding:0 4px;
+}
+.topwarp li,.topwarp dt{
+	padding:0 12px;
+}
+.search{
+	width:100%;
+	height:95px;
+}
+.searchwrap{
+	width:84%;
+	height:95px;
+	margin:0 auto;
+}
+.searchwrap h1 a{
+	height:95px;
+	display:inline-block;
+	text-align:center;
+	float:left;
+}
+.searchwrap a img{
+	vertical-align:middle;
+	display:inline-block;
+	padding-right:219px;
+}
+.searchwrap a span{
+	vertical-align:middle;
+	width:0;
+	height:100%;
+	display:inline-block;
+}
+.searchwrap .searchnav{
+	float:left;
+	color:#a2a3a5;
+	display:inline-block;
+	vertical-align:middle;
+	
+}
+.searchwrap li{
+	display: inline-block;	
+	font-size:12px;
+	padding:0 14px 0  10px;
+			}
+.searchwrap a{
+	color:#a2a3a5;
+}
+.searchwrap form{
+	padding-top:20px;
+}
+.searchwrap input{
+	height:30px;
+	width:340px;
+	border:#ec3e7d 3px solid;
+}
+.searchwrap label{
+	display:inline-block;
+	width:90px;
+	height:36px;
+	background:#ec3e7d;
+	text-align:center;
+	font-size:13px;
+	line-height:36px;
+	margin-top:-1px;
+	cursor:pointer;
+}
+
+/*nav*/
+nav{
+	height:36px;
+	width:100%;
+	background:#ccc;
+}
