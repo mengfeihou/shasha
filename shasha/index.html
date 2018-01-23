@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="shasha/js/jspublic/jquery-1.11.1.min.js"></script>
+		<style>
+			html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin:0;padding:0;}
+			ul,ol,li{list-style:none;}
+			a,u{text-decoration:none;}
+			b,strong{font-weight:100;}
+			i,em{font-style:normal;}
+			h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:100;}
+			img{display:block;border:0;}
+			.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility: hidden;}
+			.top{
+				width:100%;
+				height:100px;
+				/*position:relative;*/
+			}
+			.top img{
+				width:100%;
+				height:100px;
+				cursor:pointer;
+			}
+			/**/.top span{
+				display:inline-block;
+				height:30px;
+				width:30px;
+				background:rgba(135,135,135,0.3);
+				position:absolute;
+				left:95%;
+				top:10px;
+				font-size:20px;
+				color:rgba(255,255,255,0.7);
+				font-weight:bolder;
+				text-align:center;
+				line-height:30px;
+				cursor:pointer;
+			}
+			.topnav{
+				width:100%;
+				height:32px;
+				background:#f2f2f2;
+				border-bottom:1px solid #e5e5e5;
+			}
+			.topwarp{
+				width:84%;
+				margin:0 auto;
+				font-size:12px;
+				line-height:32px;
+			}
+			.topwarp dl,.topwarp dd,.topwarp dt,.topwarp li{
+				float:left;
+			}
+			.topwarp ul{
+				float:right;
+			}
+			.topwarp dt a{
+				display:inline-block;
+				padding:0 4px;
+			}
+			.topwarp li,.topwarp dt{
+				padding:0 12px;
+			}
+			.search{
+				width:100%;
+				height:95px;
+			}
+			.searchwrap{
+				width:84%;
+				height:95px;
+				margin:0 auto;
+			}
+			.searchwrap h1 a{
+				height:95px;
+				display:inline-block;
+				text-align:center;
+				float:left;
+			}
+			.searchwrap a img{
+				vertical-align:middle;
+				display:inline-block;
+				padding-right:219px;
+			}
+			.searchwrap a span{
+				vertical-align:middle;
+				width:0;
+				height:100%;
+				display:inline-block;
+			}
+			.searchwrap .searchnav{
+				float:left;
+				color:#a2a3a5;
+				display:inline-block;
+				vertical-align:middle;
+				
+			}
+			.searchwrap li{
+				display: inline-block;	
+				font-size:12px;
+				padding:0 14px 0  10px;
+						}
+			.searchwrap a{
+				color:#a2a3a5;
+			}
+			.searchwrap form{
+				padding-top:20px;
+			}
+			.searchwrap input{
+				height:30px;
+				width:340px;
+				border:#ec3e7d 3px solid;
+			}
+			.searchwrap label{
+				display:inline-block;
+				width:90px;
+				height:36px;
+				background:#ec3e7d;
+				text-align:center;
+				font-size:13px;
+				line-height:36px;
+				margin-top:-1px;
+				cursor:pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<!--top图片=====================================================-->
+		<div class="top">
+			<span>×</span>
+			<img src="shasha/img/indextop.jpg" />
+		</div>
+		<!--topnav====================================================-->
+		<div class="topnav">
+			<div class="topwarp">
+				<dl>
+					<dd>欢迎光临莎莎网！</dd>
+					<dt><a href="javascript:;">登录</a>或<a href="javascript:;">免费注册</a></dt>
+				</dl>
+				<ul>
+					<li><a href="javascript:;">我的购物车</a></li>
+					<li><a href="javascript:;">我的收藏</a></li>
+					<li><a href="javascript:;">我的账户</a></li>
+					<li><a href="javascript:;">我的站内信</a></li>
+					<li><a href="javascript:;">积分中心</a></li>
+					<li><a href="javascript:;">Global sit</a></li>
+					<li><a href="javascript:;">关注我们</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--searc=====================================================-->
+		<div class="search">
+			<div class="searchwrap">
+				<h1>
+					<a href="javascript:;">
+						<img src="shasha/img/logo.gif" alt="欢迎光临莎莎网" title="欢迎光临莎莎网"/><span></span>
+					</a>
+				</h1>
+				<div class="searchnav">
+					<form>
+						<input type="text" placeholder="雅诗兰黛" /><label>搜索</label>
+					</form>
+					<ul>
+						<li><a href="javascript:;">精华</a></li>|
+						<li><a href="javascript:;">保湿</a></li>|
+						<li><a href="javascript:;">面霜</a></li>|
+						<li><a href="javascript:;">眼霜</a></li>|
+						<li><a href="javascript:;">资生堂</a></li>|
+						<li><a href="javascript:;">补水</a></li>|
+						<li><a href="javascript:;">瑞士葆丽美</a></li>
+					</ul>
+				</div><span></span>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
+<script>
+/*	window.onload = function(){
+		$(".top").animate({"height":$(".top").children("img").eq(0).outerHeight()},1000);
+		$(".top span").click(function(){
+			$(".top span").css("display","none");
+			$(".top").slideUp(1);
+		})
+//	}*/
+</script>
