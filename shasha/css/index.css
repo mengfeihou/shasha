@@ -182,14 +182,15 @@ nav .son>li>a{
 .banner{
 	width:100%;
 	height:420px;
-	/*background:red;
-	overflow:hidden;*/
+	/*background:red;*/
+	overflow:hidden;
 	
 }
 .banner .bannerwrap{
 	/*width:700%;*/
 	/*background:red;*/
 	width:100%;
+	height:420px;
 	position:relative;
 }
 .banner .bannerwrap>li{
@@ -235,9 +236,9 @@ nav .son>li>a{
 .banner .bannoimg{
 	width:200px;
 	height:21px;
-	background:red;
+	/*background:red;*/
 	position:absolute;
-	bottom:10px;
+	top:655px;
 	left:46%;
 	z-index:4;
 }
@@ -254,4 +255,109 @@ nav .son>li>a{
 	background:#fa3778;
 	border:2px solid rgba(255,255,255,0.7);
 }
+
+.say{
+	width:100%;
+	height:28px;
+	background:#ececec;
+}
+.say .saywrap{
+	width:84%;
+	/*border:#FF0000 solid 2px;*/
+	font-size:12px;
+	height:28px;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+.say .saywrap>ul{
+	line-height:28px;
+	position:absolute;
+	left:28px;
+	top:0;
+}
+.say .saywrap>span{
+	font-weight:700;
+	line-height:28px;
+}
+
+/*每日必看=============*/
+.day{
+	width:100%;
+	height:62px;
+	background:#f2f2f2;
+}
+.day>p{
+	width:84%;
+	height:26px;
+	/*margin:10px auto 26px;*/
+	margin:0 auto;
+	padding:10px 0 26px;
+	background:url(../img/indexmeiribikan.png) no-repeat center;;
+}
 /**/
+/*每日必看商品===========================================================*/
+.daything{
+	width:100%;
+	background:#f2f2f2;
+	overflow:hidden;
+}
+.daything .daythingwrap{
+	width:84%;
+	margin:0 auto;
+}
+.daythingwrap>li{
+	position:relative;
+	width:592px;
+	height:278px;
+	/*border:2px solid red;*/
+}
+.daythingwrap>li>a{
+	display:inline-block;
+	text-align:center;
+}
+.daythingwrap>li>a>p{
+	float:left;
+	height:260px;
+	width:360px;
+}
+.daythingwrap>li>a>div{
+	width:230px;
+	height:260px;
+	float:left;
+	padding-left:2px;
+	background:#fff;
+}
+.daythingwrap>li>a>div>h3{
+	margin-top: 60px;
+    font-size: 22px;
+    color: #e93b78;
+}
+.daythingwrap>li>a>div>span{
+	display:block;
+	color: #5a5a5a;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.daythingwrap>li>a>div>b{
+	display:block;
+	color: #5a5a5a;
+    font-size: 13px;
+    margin-top: 3px;
+}
+.daythingwrap>li>a>div>p{
+	width:108px;
+	height:32px;
+	line-height:32px;
+	background:#e93b78;
+	position: absolute;
+	left:422px;
+	bottom:50px;
+	color:#fff;
+}
+.daythingwrap>li:nth-child(odd){
+	float:left;
+}
+.daythingwrap>li:nth-child(even){
+	float:right;
+}
