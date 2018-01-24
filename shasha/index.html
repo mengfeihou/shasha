@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script src="shasha/js/jspublic/jquery-1.11.1.min.js"></script>
+		<script src="js/jspublic/jquery-1.11.1.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<style>
-		/*	html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin:0;padding:0;}
+		/*	html,body,ul,li,ol,dl,dd,dt,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin:0;padding:0;}
 			ul,ol,li{list-style:none;}
 			a,u{text-decoration:none;}
 			b,strong{font-weight:100;}
@@ -184,19 +184,56 @@
 		</div>
 		
 		<nav>
-			<p>全部分类</p>
-			<p><a href="javascript:;">闪电保税专区</a></p>
-			
+			<ul class="father">
+				<li><span>全部分类</span>
+					<ul class="son">
+						<li><a href="javascript:;">面部护肤</a></li>
+						<li><a href="javascript:;">彩妆</a></li>
+						<li><a href="javascript:;">香水</a></li>
+						<li><a href="javascript:;">健康美肌</a></li>
+						<li><a href="javascript:;">纤体美胸</a></li>
+						<li><a href="javascript:;">个人护理</a></li>
+						<li><a href="javascript:;">男士专区</a></li>
+						<li><a href="javascript:;">孕婴护理</a></li>
+					</ul>					
+				</li>
+				<li><a href="javascript:;">闪电保税专区</a>/</li>
+				<li><a href="javascript:;">面部护肤</a>/</li>
+				<li><a href="javascript:;">彩妆</a>/</li>
+				<li><a href="javascript:;">限时特卖</a>/</li>
+				<li><a href="javascript:;">贵宾专享</a>/</li>
+				<li><a href="javascript:;">清仓特卖</a>/</li>
+				<li><a href="javascript:;">所有品牌</a></li>
+			</ul>
 		</nav>
+		
+		<!--banner 我的广告图片======================================-->
+		<div class="banner">
+			<ul class="bannerwrap" id = "bannerwrap">
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+				<li><a href="javascript:;"></a></li>
+				<ol class="bannoimg" id="bannoimg">
+					<li class="activ"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</ul>
+			<!--<div class="bannerwrap"></div>-->
+			<p class="bannersay">
+				<span>公告</span>
+				<i></i>
+			</p>
+		</div>
 		
 	</body>
 </html>
-<script>
-/*	window.onload = function(){
-		$(".top").animate({"height":$(".top").children("img").eq(0).outerHeight()},1000);
-		$(".top span").click(function(){
-			$(".top span").css("display","none");
-			$(".top").slideUp(1);
-		})
-//	}*/
-</script>
+<script src="js/index.js"></script>
