@@ -54,20 +54,20 @@
 //每日必看商品
 $.ajax({
 	type:"get",
-	url:"json/indexday.json",
+	url:("json/indexday.json?deta="+new Date().getTime()),
 	success:function(res){
-		console.log(res.length);
+		console.log(res.day.length);
 		var str = "";
-		for(var i = 0 ; i < res.length;i++){
-			var pro = res[i];
+		for(var i = 0 ; i < res.day.length;i++){
+			var pro = res.day[i];
 			str += `<li>
-						<a href="${pro.url}">
+						<a href="${pro.href}">
 							<p><img src="img/${pro.src}"/></p>
 							<div>
 								<h3>${pro.h3}</h3>
 								<span>${pro.span}</span>
 								<b>${pro.b}</b>
-								<p>立即疯抢2</p>
+								<p>立即疯抢</p>
 							</div>
 						</a>
 					</li>`;
@@ -76,3 +76,98 @@ $.ajax({
 	}
 })
 /**/
+$.ajax({
+	type:"get",
+	url:("json/indexday.json?deta="+new Date().getTime()),
+	success:function(res){
+		console.log(res.limited.length);
+		var str = "";
+		var dat = new Date();
+		var dats = new Date().getTime();
+		var hours = dat.getHours();
+
+		/*var y = dat.getFullYear();
+		var moth = dat.getMonth()+1;
+		var day = dat.getDate();
+		var minutes = dat.getMinutes();
+		var seconds = dat.getSeconds();
+		dat = y + "/" +moth + "/" + day + " " + 
+				(hours>=10?hours:"0"+hours) + ":"+
+				(minutes>=10?minutes:"0"+minutes) + ":"+
+				(seconds>=10?seconds:"0"+seconds);
+				alert(dat);
+		var dats = new Date(dat).getTime();
+		alert(dats);*/
+		if(hours>=9){
+//			alert(times);
+			setInterval(function(){
+				var sp = "";
+				var dat = new Date();
+				var dats = new Date().getTime();
+				var dat1 = new Date();
+				dat1.setDate(dat1.getDate()+1);
+				var y1 = dat1.getFullYear();
+				var moth1 = dat1.getMonth()+1;
+				var day1 = dat1.getDate();
+				dat1 = y1 + "/" +moth1 + "/" + day1 + " " + "09:00:00"
+	//			alert(dat1);
+				dat1s = new Date(dat1).getTime();
+				var time = (dat1s - dats)/1000;
+				var timeh = parseInt(time/3600);
+				var timem = parseInt((time - timeh*3600)/60);
+				var times = parseInt((time - timeh*3600 - timem*60));
+				
+				sp = `剩余&ensp;<span>${timeh >= 10?timeh:"0"+timeh}</span>:
+						  <span>${timem>= 10?timem:"0"+timem}</span>:
+						  <span>${times >= 10?times:"0"+times}</span>`;
+				$(".time").html(sp);
+				console.log($("#time").html());
+			},1000)
+		}else{
+			setInterval(function(){
+				var sp = "";
+				var dat = new Date();
+				var dats = new Date().getTime();
+				var dat1 = new Date();
+				var y1 = dat1.getFullYear();
+				var moth1 = dat1.getMonth()+1;
+				var day1 = dat1.getDate();
+				dat1 = y1 + "/" +moth1 + "/" + day1 + " " + "09:00:00"
+	//			alert(dat1);
+				dat1s = new Date(dat1).getTime();
+				var time = (dat1s - dats)/1000;
+				var timeh = parseInt(time/3600);
+				var timem = parseInt((time - timeh*3600)/60);
+				var times = parseInt((time - timeh*3600 - timem*60));
+				
+				sp = `剩余&ensp;<span>${timeh >= 10?timeh:"0"+timeh}</span>:
+						  <span>${timem>= 10?timem:"0"+timem}</span>:
+						  <span>${times >= 10?times:"0"+times}</span>`;
+				$(".time").html(sp);
+				console.log($("#time").html());
+			},1000)
+		}
+		for(var i = 0 ; i < res.limited.length;i++){
+			var pro = res.limited[i];
+			str += `<li>
+						<a href="javascript:;" class="limitedUla">
+							<div><img src="img/${pro.src}"></div>
+							<div class="limiteddiv">
+								<p class = "time">剩余</p>
+								<p>${pro.p2}</p>
+								<p>${pro.p3} </p>
+								<p>
+									<span>${pro.p4span1}</span>
+									<span>${pro.p4span2}</span>
+								</p>
+								<p>
+									<b>已售0件</b><b>马上抢</b>
+								</p>
+							</div>
+						</a>
+					</li>`;
+		}
+		$("#limitedUl").html(str);
+	}
+})
+//alert(new Date().getHours())

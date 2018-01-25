@@ -5,134 +5,6 @@
 		<title></title>
 		<script src="js/jspublic/jquery-1.11.1.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<style>
-		/*	html,body,ul,li,ol,dl,dd,dt,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin:0;padding:0;}
-			ul,ol,li{list-style:none;}
-			a,u{text-decoration:none;}
-			b,strong{font-weight:100;}
-			i,em{font-style:normal;}
-			h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:100;}
-			img{display:block;border:0;}
-			.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility: hidden;}
-			.top{
-				width:100%;
-				height:100px;
-				//position:relative;
-			}
-			.top img{
-				width:100%;
-				height:100px;
-				cursor:pointer;
-			}
-			.top span{
-				display:inline-block;
-				height:30px;
-				width:30px;
-				background:rgba(135,135,135,0.3);
-				position:absolute;
-				left:95%;
-				top:10px;
-				font-size:20px;
-				color:rgba(255,255,255,0.7);
-				font-weight:bolder;
-				text-align:center;
-				line-height:30px;
-				cursor:pointer;
-			}
-			.topnav{
-				width:100%;
-				height:32px;
-				background:#f2f2f2;
-				border-bottom:1px solid #e5e5e5;
-			}
-			.topwarp{
-				width:84%;
-				margin:0 auto;
-				font-size:12px;
-				line-height:32px;
-			}
-			.topwarp dl,.topwarp dd,.topwarp dt,.topwarp li{
-				float:left;
-			}
-			.topwarp ul{
-				float:right;
-			}
-			.topwarp dt a{
-				display:inline-block;
-				padding:0 4px;
-			}
-			.topwarp li,.topwarp dt{
-				padding:0 12px;
-			}
-			.search{
-				width:100%;
-				height:95px;
-			}
-			.searchwrap{
-				width:84%;
-				height:95px;
-				margin:0 auto;
-			}
-			.searchwrap h1 a{
-				height:95px;
-				display:inline-block;
-				text-align:center;
-				float:left;
-			}
-			.searchwrap a img{
-				vertical-align:middle;
-				display:inline-block;
-				padding-right:219px;
-			}
-			.searchwrap a span{
-				vertical-align:middle;
-				width:0;
-				height:100%;
-				display:inline-block;
-			}
-			.searchwrap .searchnav{
-				float:left;
-				color:#a2a3a5;
-				display:inline-block;
-				vertical-align:middle;
-				
-			}
-			.searchwrap li{
-				display: inline-block;	
-				font-size:12px;
-				padding:0 14px 0  10px;
-						}
-			.searchwrap a{
-				color:#a2a3a5;
-			}
-			.searchwrap form{
-				padding-top:20px;
-			}
-			.searchwrap input{
-				height:30px;
-				width:340px;
-				border:#ec3e7d 3px solid;
-			}
-			.searchwrap label{
-				display:inline-block;
-				width:90px;
-				height:36px;
-				background:#ec3e7d;
-				text-align:center;
-				font-size:13px;
-				line-height:36px;
-				margin-top:-1px;
-				cursor:pointer;
-			}
-			
-			//nav
-			nav{
-				height:36px;
-				width:100%;
-				background:#ccc;
-			}*/
-			
-		</style>
 	</head>
 	<body>
 		<!--top图片=====================================================-->
@@ -271,7 +143,7 @@
 		<!--每日必看商品===================-->
 		<div class="daything"  title="每日必看">
 			<ul class="daythingwrap" id="daythingwrap">
-				<li>
+			<!--	<li>
 					<a href="javascript:;">
 						<p><img src="img/day01.jpg"/></p>
 						<div>
@@ -281,30 +153,52 @@
 							<p>立即疯抢1</p>
 						</div>
 					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-						<p><img src="img/day01.jpg"/></p>
-						<div>
-							<h3>瑞士阿尔卑斯山天然资源 </h3>
-							<span>瑞士阿尔卑斯山天然资源 </span>
-							<b>Methode Swiss全场四折起</b>
-							<p>立即疯抢2</p>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
-						<p><img src="img/day01.jpg"/></p>
-						<div>
-							<h3>瑞士阿尔卑斯山天然资源 </h3>
-							<span>瑞士阿尔卑斯山天然资源 </span>
-							<b>Methode Swiss全场四折起</b>
-							<p>立即疯抢2</p>
-						</div>
-					</a>
-				</li>
+			</li>-->
 			</ul>
+		</div>
+		<!--限时特卖======================================-->
+		<div class="limited">
+			<div class="limitedwrap">
+				<p></p>
+				<p>每天9:00准时开抢</p>
+				<ul class="limitedUl" id="limitedUl">
+					<!--<li>
+						<a href="javascript:;" class="limitedUla">
+							<div><img src="img/limited01.jpg"></div>
+							<div class="limiteddiv">
+								<p>剩余</p>
+								<p>Nuxe (欧树) 蜂蜜梦幻唇部及手部柔护限量套装 (2件套)</p>
+								<p> 欧树 蜂蜜梦幻唇部及手部柔护限量套装 2件套  </p>
+								<p>
+									<span>86</span>
+									<span>￥106</span>
+								</p>
+								<p>
+									<b>已售0件</b><b>马上抢</b>
+								</p>
+							</div>
+						</a>
+					</li>-->
+				</ul>
+				<span><a href="javascript:;">查看更多特卖</a></span>
+			</div>
+		</div>
+		
+		
+		<!--排行榜   ranking=====================================================-->
+		<div class="ranking">
+			<div class="rankingwrap">
+				<p></p>
+				<div>
+					<h3>护肤排行榜</h3>
+				</div>
+				<div>
+					<h3>彩妆排行榜</h3>
+				</div>
+				<div>
+					<h3>个护排行榜</h3>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

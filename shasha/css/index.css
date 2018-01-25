@@ -6,6 +6,8 @@ i,em{font-style:normal;}
 h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:100;}
 img{display:block;border:0;}
 .clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility: hidden;}
+
+
 .top{
 	width:100%;
 	height:100px;
@@ -38,7 +40,7 @@ img{display:block;border:0;}
 	border-bottom:1px solid #e5e5e5;
 }
 .topwarp{
-	width:84%;
+	width:1200px;
 	margin:0 auto;
 	font-size:12px;
 	line-height:32px;
@@ -61,7 +63,7 @@ img{display:block;border:0;}
 	height:95px;
 }
 .searchwrap{
-	width:84%;
+	width:1200px;
 	height:95px;
 	margin:0 auto;
 }
@@ -125,7 +127,7 @@ nav{
 
 nav>ul{
 	position:relative;
-	width:84%;
+	width:1200px;
 	line-height:36px;
 	margin:0 auto;
 	font-size:15px;
@@ -262,7 +264,7 @@ nav .son>li>a{
 	background:#ececec;
 }
 .say .saywrap{
-	width:84%;
+	width:1200px;
 	/*border:#FF0000 solid 2px;*/
 	font-size:12px;
 	height:28px;
@@ -288,7 +290,7 @@ nav .son>li>a{
 	background:#f2f2f2;
 }
 .day>p{
-	width:84%;
+	width:1200px;
 	height:26px;
 	/*margin:10px auto 26px;*/
 	margin:0 auto;
@@ -303,17 +305,19 @@ nav .son>li>a{
 	overflow:hidden;
 }
 .daything .daythingwrap{
-	width:84%;
+	width:1200px;
 	margin:0 auto;
 }
 .daythingwrap>li{
 	position:relative;
 	width:592px;
+	/*width:50%;*/
 	height:278px;
 	/*border:2px solid red;*/
 }
 .daythingwrap>li>a{
 	display:inline-block;
+	/*width:90%;*/
 	text-align:center;
 }
 .daythingwrap>li>a>p{
@@ -361,3 +365,155 @@ nav .son>li>a{
 .daythingwrap>li:nth-child(even){
 	float:right;
 }
+/*限时抢购商品*/
+.limited{
+	width:100%;
+	background:#f2f2f2;
+}
+.limited .limitedwrap{
+	width:1200px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.limited .limitedwrap>p:nth-child(1){
+	padding:34px 0 10px;
+	height:26px;
+	line-height:26px;
+	width:100%;
+	background:url(../img/limited.png) no-repeat center;
+}
+.limited .limitedwrap>p:nth-child(2){
+	width:100%;
+	font-size:20px;
+	height:22px;
+	line-height:22px;
+	text-align:center;
+}
+.limited .limitedUl,.limited .limitedUl>li{
+	width:100%;
+}
+.limited .limitedUl>li{
+	height:360px;
+
+}
+.limited .limitedUla{
+	display:inline-block;
+	margin-top:26px;
+	background:#fff;
+	width:100%;
+	height:334px;
+}
+.limited .limitedUla>div:nth-child(1){
+	width:50%;
+	height:100%;
+	float:left;
+	/*background:url(../img/limited01.jpg) no-repeat center;
+	background-size:100%;*/
+}
+.limited .limitedUla>div:nth-child(1)>img{
+	width:100%;
+	height:100%;
+	display:inline-block;
+}
+.limited .limitedUla .limiteddiv{
+	width:40%;
+	margin:3% 5% 0 0;
+	float:right;
+	position:relative;
+	
+}
+.limited .limiteddiv>p:nth-child(1){
+	width:97px;
+	padding:0 10px;
+	height:26px;
+	background:#000;
+	color:#fff;
+	font-size:13px;
+	line-height:26px;
+}
+.limited .limiteddiv>p:nth-child(2){
+	width:100%;
+	height:120px;
+	margin:10px 0;
+	font-size:18px;
+	line-height:30px;
+	color:#222;
+}
+.limited .limiteddiv>p:nth-child(3){
+	height:20px;
+	font-size:13px;
+	color:#666;
+}
+.limited .limiteddiv>p:nth-child(4){
+	height:30px;
+	line-height:30px;
+	color:#fc3f83;
+}
+.limited .limiteddiv>p:nth-child(4)>span:nth-child(1){
+	font-size:32px;
+	font-weight:700;
+}
+.limited .limiteddiv>p:nth-child(4)>span:nth-child(2){
+	font-size:13px;
+	color:#999;
+	line-height:23px;
+	text-decoration: line-through;
+}
+.limited .limiteddiv>p:nth-child(5){
+	width:100%;
+	height:32px;
+	position:absolute;
+	bottom:-50px;
+}
+.limited .limiteddiv>p:nth-child(5)>b:nth-child(1){
+	display:inline-block;
+	line-height:13px;
+	line-height:50px;
+	color:#999;
+	font-size:12px;
+}
+.limited .limiteddiv>p:nth-child(5)>b:nth-child(2){
+	display:inline-block;
+	float:right;
+	height:32px;
+	line-height:32px;
+	width:92px;
+	text-align:center;
+	background:#e93b78;
+	font-size:16px;
+	color:#fff;
+}
+
+.limited .limitedwrap>span,.limited .limitedwrap>span>a{
+	display:block;
+	background:#fc3f83;
+	width:160px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+	color:#fff;
+	margin:0 auto ;
+	border-radius:24px;
+}
+.limited .limitedwrap>span{
+	margin-top:20px;
+}
+
+/*ranking排行榜*/
+.ranking{
+	width:100%;
+	background:#f2f2f2;
+}
+.ranking .rankingwrap{
+	width:1200px;
+	overflow:hidden;
+	margin:0 auto;
+}
+
+.ranking .rankingwrap>p:nth-child(1){
+	width:1200px;
+	height:26px;
+	margin:38px 0 26px;
+	background:url(../img/ranking.png) no-repeat center;
+}
+
