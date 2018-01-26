@@ -1,6 +1,6 @@
 //banner的轮播================================================
 //$("#bannerwrap>li").eq(0).css("display","none");
-/**/	var Timer = setInterval(autoplay,900);
+	var Timer = setInterval(autoplay,900);
 	var index = 0;
 	function autoplay(){
 		index++;
@@ -75,7 +75,6 @@ $.ajax({
 		$("#daythingwrap").html(str);
 	}
 })
-/**/
 $.ajax({
 	type:"get",
 	url:("json/indexday.json?deta="+new Date().getTime()),
