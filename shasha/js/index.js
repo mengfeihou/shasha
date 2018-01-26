@@ -52,7 +52,7 @@
 	})
 
 //每日必看商品
-$.ajax({
+/*$.ajax({
 	type:"get",
 	url:("json/indexday.json?deta="+new Date().getTime()),
 	success:function(res){
@@ -74,12 +74,29 @@ $.ajax({
 		}
 		$("#daythingwrap").html(str);
 	}
-})
+})*/
 $.ajax({
 	type:"get",
 	url:("json/indexday.json?deta="+new Date().getTime()),
 	success:function(res){
-		console.log(res.limited.length);
+		var lim = "";
+		for(var i = 0 ; i < res.day.length;i++){
+			var pro = res.day[i];
+			lim += `<li>
+						<a href="${pro.href}">
+							<p><img src="img/${pro.src}"/></p>
+							<div>
+								<h3>${pro.h3}</h3>
+								<span>${pro.span}</span>
+								<b>${pro.b}</b>
+								<p>立即疯抢</p>
+							</div>
+						</a>
+					</li>`;
+		}
+		$("#daythingwrap").html(lim);
+		
+		
 		var str = "";
 		var dat = new Date();
 		var dats = new Date().getTime();
@@ -120,7 +137,7 @@ $.ajax({
 						  <span>${timem>= 10?timem:"0"+timem}</span>:
 						  <span>${times >= 10?times:"0"+times}</span>`;
 				$(".time").html(sp);
-				console.log($("#time").html());
+//				console.log($("#time").html());
 			},1000)
 		}else{
 			setInterval(function(){
@@ -143,7 +160,7 @@ $.ajax({
 						  <span>${timem>= 10?timem:"0"+timem}</span>:
 						  <span>${times >= 10?times:"0"+times}</span>`;
 				$(".time").html(sp);
-				console.log($("#time").html());
+//				console.log($("#time").html());
 			},1000)
 		}
 		for(var i = 0 ; i < res.limited.length;i++){
@@ -170,3 +187,16 @@ $.ajax({
 	}
 })
 //alert(new Date().getHours())
+
+//楼梯效果的选项卡
+$(window).scroll(function(){
+	var scr = $(this).scrollTop();
+	if(scr <= 795 || scr>=7860){
+		$("#stair").css("display","none");
+	}else{
+		$("#stair").css({"display":"block","position":"fixed","top":50});
+	}
+	
+	console.log(scr)
+})
+alert($("#daything").offset().top);
