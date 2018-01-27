@@ -191,12 +191,26 @@ $.ajax({
 //楼梯效果的选项卡
 $(window).scroll(function(){
 	var scr = $(this).scrollTop();
-	if(scr <= 795 || scr>=7860){
+	if(scr <= 795 || scr>=7800){
 		$("#stair").css("display","none");
 	}else{
 		$("#stair").css({"display":"block","position":"fixed","top":50});
 	}
+	for(var i = 0 ; i < $(".stair_").length ; i++ ){
+		var otop = $(".stair_").eq(i).offset().top;
+		if(scr>=otop){
+			$("#stair>li").eq(i).addClass("stair_active")
+		   		    .siblings().removeClass("stair_active");
+		}
+	}
 	
-	console.log(scr)
 })
-alert($("#daything").offset().top);
+
+$("#stair>li").click(function(){
+	var index = $(this).index();
+	$(this).addClass("stair_active")
+		   .siblings().removeClass("stair_active");
+	var otop = $(".stair_").eq(index).offset().top;
+	$("html,body").scrollTop(otop);
+	alert(otop);
+})

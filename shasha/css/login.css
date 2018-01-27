@@ -1,0 +1,48 @@
+.main .main_wrap>form>p>span:nth-child(2){
+	margin-left:100px;
+}
+.main .main_wrap>form>input:nth-child(6){
+	display:inline-block;
+	width:14px;
+	height:14px;
+	float:left;
+}
+.main .main_wrap>form>label:nth-child(7){
+	display:inline-block;
+	font-size:12px;
+	line-height:14px;
+	float: left;
+	padding-left:5px;
+}
+.main .main_wrap>form>label:nth-child(7) a{
+	color:#ed3f7e;
+	}
+	.main .main_wrap>form>label:nth-child(7)+span{
+		clear:both;
+	}
+.main .main_wrap>form>input:nth-child(9){
+	background:#ec3e7d;
+	border:0px ;
+}
+.main .main_wrap>form>p:nth-child(10){
+	font-size:14px;
+	padding-top:10px;
+}
+.main .main_wrap>form>i{
+	margin-top:-20px;
+	display:inline-block;
+}
+.main .main_wrap>form>i>img{
+	display:inline-block;
+	width:40px;
+	height:40px;
+	float:left;
+}
+.main .main_wrap>form>i>b{
+	font-size:12px;
+	display:inline-block;
+	line-height:40px;
+	float:left;
+	width:75px;
+	padding-left:5px;
+}

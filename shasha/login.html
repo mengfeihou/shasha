@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/register.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 	</head>
 	<body>
 		<div class="topnav">
@@ -48,19 +49,20 @@
 				<img src="img/register/girl.gif"/>
 				<form action="index.html" method="get">
 					<p>
-						<span>注册账号</span>
-						<span>已有莎莎账号？</span>
-						<span><a href="login.html">立即登录</a></span>
+						<span>用户登录</span>
+						<span>还没有莎莎账号？</span>
+						<span><a href="register.html">立即注册</a></span>
 					</p>
-					<input type="text" id="uname" placeholder="请输入邮箱、手机号，最少5个字符"/>
-					<span>请输入邮箱、手机号，最少5个字符</span>
-					<input type="password" id="pwd" placeholder="请输入密码6—16位字母和数字的组合" />
-					<span>请输入密码6—16位字母和数字的组合</span>
-					<input type="password" id="qpwd" placeholder="再次填写密码" />
-					<span>再次填写密码</span>
-					<input type="checkbox" id="cke" /><label for="cke">同意 &nbsp;莎莎网保护条款&nbsp;和&nbsp;隐私政策</label>
+					<input type="text" placeholder="邮箱/手机号" id="uname"/>
+					<span>邮箱/手机号</span>
+					<input type="password" placeholder="填写密码" id="pwd" />
+					<span>填写密码</span>
+					<input type="checkbox" id="cke" /><label for="cke">记住我&ensp;<a href="javascript:;">忘记密码</a></label>
 					<span>记得打对勾哦</span>
-					<input type="submit" value="注册" />
+					<input type="submit" value="登录" />
+					<p>第三方账号登录</p>
+					<i><img src="img/register/loginweibo.gif" /><b>微博登录</b></i>
+					<i><img src="img/register/loginzhifu.gif" /><b>支付宝登录</b></i>
 				</form>
 			</div>
 		</div>
@@ -74,15 +76,12 @@
 					<li><a href="javascript:;">隐私策略 </a>|</li>
 					<li><a href="javascript:;">批发服务</a>|</li>
 					<li><a href="javascript:;">招商合作</a>|</li>
-					<li><a href="javascript:;">帮助中心</a>|</li>
-					<li><a href="javascript:;">港澳店铺推广</a>|</li>
-					<li><a href="javascript:;">人才招聘</a>|</li>
-					<li><a href="javascript:;">联络我们</a>|</li>
-					<li><a href="javascript:;">其他送货地区</a></li>
+					<li><a href="javascript:;">帮助中心</a></li>
+
 				</ul>
 				<p>Copyright 2000-2018 Sa Sa dot Com Limited 版权所有莎莎国际控股有限公司成员</p>
 			</div>
 		</footer>
 	</body>
 </html>
-<script type="text/javascript" src="js/jspublic/require.js" data-main = "js/register.js"></script>
+<script src="js/jspublic/require.js" data-main = "js/login.js"></script>
