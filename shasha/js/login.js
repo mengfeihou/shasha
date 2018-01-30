@@ -7,7 +7,7 @@ require.config({ //错误 require config
 })
 
 requirejs(["jquery","loginend","cookie"],function($,obj){
-	$("form").submit(function(){
+	/*$("form").submit(function(){
 		if(flagname && flagpwd && flagck){
 			return true;
 		}else{
@@ -36,7 +36,32 @@ requirejs(["jquery","loginend","cookie"],function($,obj){
 			$(this).next().html("嗯  密码 好像还有些偏差哦").css("color","red");
 			return flagpwd = false;
 		}
-	}.bind($("#pwd")));
+	}.bind($("#pwd")));*/
+	
+	$("form").submit(function(){
+		var getcook = getCookie("shop");
+		if(flagck){
+			alert(getcook.length);
+			if(getcook.length==0){
+				return false;
+			}else{
+				for(var i = 0 ; i < getcook.length ; i++){
+					if(getcook[i].name == $("#uname").val() && getcook[i].pwd == $("#pwd").val()){
+						$("#uname").next().html("正确").css("color","#000");
+						$("#pwd").next().html("哈哈 厉害  还记得密码").css("color","#000");
+						alert("哈哈哈");
+						return true;
+					}else{
+						alert("小样  您的用户名或者密码有误");
+						return false;
+					}
+				}
+			}
+			
+		}else{
+			return false;
+		}
+	});
 	
 	var flagck = null;
 	$("#cke").blur(function(){

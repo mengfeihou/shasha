@@ -145,12 +145,25 @@ $.ajax({
 				var dat = new Date();
 				var dats = new Date().getTime();
 				var dat1 = new Date();
+				
 				var y1 = dat1.getFullYear();
 				var moth1 = dat1.getMonth()+1;
 				var day1 = dat1.getDate();
 				dat1 = y1 + "/" +moth1 + "/" + day1 + " " + "09:00:00"
 	//			alert(dat1);
 				dat1s = new Date(dat1).getTime();
+				if(dat1s<=0){
+					var dat = new Date();
+					var dats = new Date().getTime();
+					var dat1 = new Date();
+					dat1.setDate(dat1.getDate()+1);
+					var y1 = dat1.getFullYear();
+					var moth1 = dat1.getMonth()+1;
+					var day1 = dat1.getDate();
+					dat1 = y1 + "/" +moth1 + "/" + day1 + " " + "09:00:00"
+		//			alert(dat1);
+					dat1s = new Date(dat1).getTime();
+				}
 				var time = (dat1s - dats)/1000;
 				var timeh = parseInt(time/3600);
 				var timem = parseInt((time - timeh*3600)/60);
@@ -214,3 +227,5 @@ $("#stair>li").click(function(){
 	$("html,body").scrollTop(otop);
 	alert(otop);
 })
+
+

@@ -8,12 +8,32 @@ require.config({
 requirejs(["jquery","registerend","cookie"],function($,obj){
 	
 	$("form").submit(function(){
-		
 		if(flagname && flagpwd && flagqpwd && flagck){
+			var getcook = getCookie("shop");
+			var arr = [];
 			var json = {"name":$("#uname").val(),
 						"pwd":$("#pwd").val()
 						}
-			setCookie("shop",JSON.stringify(json));
+			if(getcook.length > 0){
+				for(var i = 0 ; i < getcook.length ; i++){
+					if(getcook[i].name == $("#uname").val()){
+						
+							if(getcook[i].name == $("#uname").val() && getcook[i].pwd == $("#pwd").val()){
+							alert("哈哈哈 其实您是可以直接登录的吼吼");
+							return true;
+						}else{   	
+							alert("您的账号已经被注册过了");
+							return false;
+						}
+						
+					}
+				}
+				arr = getcook;
+				arr.push(json);
+			}else{
+					arr.push(json);
+				}
+			setCookie("shop",JSON.stringify(arr));
 			return true;
 		}else{
 			return false;
