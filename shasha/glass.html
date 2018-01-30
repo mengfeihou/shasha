@@ -5,6 +5,8 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css"	href="css/glass.css" />
 	</head>
+
+	
 	<body>
 			<div class="topnav">
 			<div class="topwarp">
@@ -91,22 +93,20 @@
 					<span>0</span>秒
 				</h3>
 				<!--放大镜图片左图片 右文字  -->
-				<div class="glal">
+				<div class="glal" id="glal">
 					<div class="mid" id="mid">
 						<img src="img/data/big/m01.jpg" />
 						<p id="mask"></p>
 					</div>
-					<div class="big">
-						<img src="img/data/big/big01.jpg" id="bigimg" id="big"/>
+					<div class="big" id="big">
+						<img src="img/data/big/big01.jpg" id="bigimg"/>
 					</div>
 					<ul class="small">
 						<li><img src="img/data/big/small01.jpg" /></li>
-						<li><img src="img/data/big/small01.jpg" /></li>
-						<li><img src="img/data/big/small01.jpg" /></li>
 					</ul>
 				</div>
-				<div class="glar">
-					<p class="p1"> 揉合独家专利生物活力细胞复合元素(BCC) 、三重保湿升华复合物、三重生肌精华三种高科技配方</p>
+				<div class="glar" id="glar">
+					<!--<p class="p1"> 揉合独家专利生物活力细胞复合元素(BCC) 、三重保湿升华复合物、三重生肌精华三种高科技配方</p>
 					<p class="p2">瑞士葆丽美 </p>
 					<p class="p3">升级版活氧细胞生肌升华露  (60毫升) </p>
 					<p class="p4">数量：<span>-</span><span>1</span><span>+</span></p>
@@ -114,10 +114,10 @@
 						<span>特卖价</span>
 						<span>￥219.0</span>
 						<span>市场价605.0</span>
-					</p>
+					</p>-->
 					<p class="p6">
-							<span>立即抢购</span>
-							<span>扫扫即加购物车i</span>
+							<span id="btn">立即抢购</span>
+							<span id="er">扫扫即加购物车i</span>
 					</p>
 					<p class="p7"></p>
 				</div>
@@ -210,4 +210,5 @@
 	</body>
 </html>
 <script src="js/jspublic/jquery-1.11.1.min.js"></script>
+<script src="js/jspublic/cookie.js"></script>
 <script src="js/glass.js"></script>

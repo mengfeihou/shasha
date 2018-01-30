@@ -280,7 +280,7 @@ nav .son>li>a{
 .glass .glal{
 	width:550px;
 	height:620px;
-	border:1px solid red;
+	/*border:1px solid red;*/
 	position:relative;
 	float:left;
 }
@@ -338,16 +338,13 @@ nav .son>li>a{
 	width:60px;
 	height:60px;
 }
-.glass .glal .small>li:hover{
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-}
 
 .glass .glar{
 	float:right;
 	width:522px;
 	height:570px;
 	padding:35px 40px 0 0;
-	background:greenyellow;
+	/*background:greenyellow;*/
 }
 
 .glass .glar .p1{
@@ -390,6 +387,9 @@ nav .son>li>a{
 	color:#ec3e7d;
 	font-weight:bold;
 }
+.glass .glar .p5>span:nth-child(3){
+	text-decoration:line-through;
+}
 
 .glass .glar .p6>span:nth-child(1){
 	display:inline-block;
@@ -402,6 +402,7 @@ nav .son>li>a{
 	 color:#fff;
 	 line-height:50px;
 	 margin-bottom:15px;
+	 cursor: pointer;
 }
 .glass .glar .p6>span:nth-child(2){
 	display:inline-block;

@@ -178,13 +178,13 @@ $.ajax({
 		}
 		for(var i = 0 ; i < res.limited.length;i++){
 			var pro = res.limited[i];
-			str += `<li>
-						<a href="javascript:;" class="limitedUla">
+			str += `<li data-index = "${i}">
+						<a href="glass.html" class="limitedUla">
 							<div><img src="img/${pro.src}"></div>
 							<div class="limiteddiv">
 								<p class = "time">剩余</p>
 								<p>${pro.p2}</p>
-								<p>${pro.p3} </p>
+								<p>${pro.p3}</p>
 								<p>
 									<span>${pro.p4span1}</span>
 									<span>${pro.p4span2}</span>
@@ -228,4 +228,9 @@ $("#stair>li").click(function(){
 	alert(otop);
 })
 
+//$("#limitedUl")委托实现跳转  放大镜页面  
+$("#limitedUl").on("click","li",function(){
+//	alert($(this).data("index"));
+	setCookie("index",JSON.stringify($(this).data("index")))
+})
 

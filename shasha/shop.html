@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="js/jspublic/jquery-1.11.1.min.js"></script>
+		<link rel="stylesheet" href="css/main.css" />
+		<style>
+			.shoplist{
+				width: 1050px;
+			}
+			.shop-item{
+				width: 100%;
+				
+				/*border: 1px solid #d1d1d1;*/
+				margin: 20px auto;
+				text-align: center;
+			}
+			.fl{
+				float: left;
+			}
+			.shop-item input[type="checkbox"]{
+				width: 30px;
+				height: 30px;
+			}
+			.shop-item .fl{
+				padding: 10px;
+				width: 129px;
+				display: block;
+				font-style: normal;
+				height: 150px;
+				border: 1px solid #d1d1d1;
+				margin-left: -1px;
+			}
+			.shop-item .fl:after{
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+			.shop-item .count > span{
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				border: 1px solid #d1d1d1;
+				line-height: 30px;
+				cursor: pointer;
+				margin-left: 5px;
+			}
+			#sum{
+				width: 1050px;
+				margin: 20px auto 100px;
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+	 
+		<div class="shoplist">
+			<!--
+				'<div class="shop-item clearfix">'+
+					'<p class="fl"><input type="checkbox" class="ck"/></p>'+
+					'<img class="fl" src="img/'+ shopinfo.src +'" alt="" />'+
+					'<p class="fl">'+ shopinfo.name +'</p>'+
+					'<span class="fl">'+ shopinfo.price +'元</span>'+
+					'<p class="fl count" '+
+						'data-id="'+ shopinfo.id +'" '+
+						'data-price="'+ shopinfo.price +'" data-count="'+ shopinfo.count +'"'+
+						'data-name="'+ shopinfo.name +'" data-src="'+ shopinfo.src +'"'+
+						'>'+
+						'<span class="updateCount" data-number="1">+</span>'+
+						'<span class="shop-count">'+ shopinfo.count +'</span>'+
+						'<span class="updateCount" data-number="-1">-</span>'+
+					'</p>'+
+					'<em class="fl sumPrice">'+ (shopinfo.count * shopinfo.price) +'元</em>'+
+					'<i class="fl delBtn">删除</i>'+
+				'</div>';
+			-->
+		</div>
+		<div id="sum" class="clearfix">
+			共多少<span class="count2"></span>件商品，合计<span class="money2"></span>元
+			<label class="fl">
+				<input id="selectAll" type="checkbox"/>全选
+			</label>
+		</div>
+		
+	</body>
+</html>
+<script src="js/jspublic/cookie.js"></script>
+<script>
+	 console.log(getCookie("shoplist"));
+	 var arr = getCookie("shoplist");
+	 var str = "";
+	 for(var i = 0 ; i < arr.length;i++){
+	 	var shopinfo = arr[i];
+	 	str += '<div class="shop-item clearfix">'+
+					'<p class="fl"><input type="checkbox" class="ck"/></p>'+
+					'<img class="fl" src="img/'+ shopinfo.src +'" alt="" />'+
+					'<p class="fl">'+ shopinfo.name +'</p>'+
+					'<span class="fl">'+ shopinfo.price +'元</span>'+
+					'<p class="fl count" '+
+						'data-id="'+ shopinfo.src +'" '+
+						'data-price="'+ shopinfo.price +'" data-count="'+ shopinfo.count +'"'+
+						'data-name="'+ shopinfo.name +'" data-src="'+ shopinfo.src +'"'+
+						'>'+
+						'<span class="updateCount" data-number="1">+</span>'+
+						'<span class="shop-count">'+ shopinfo.count +'</span>'+
+						'<span class="updateCount" data-number="-1">-</span>'+
+					'</p>'+
+					'<em class="fl sumPrice">'+ (shopinfo.count * shopinfo.price) +'元</em>'+
+					'<i class="fl delBtn">删除</i>'+
+				'</div>'
+	 }
+	 $(".shoplist").html(str);
+	 jiesuan();
+	
+	function jiesuan(){
+	//被选中商品
+		var count = 0;
+		var sum = 0;
+		$(".ck:checked").each(function(){
+			count += parseInt($(this).parent().parent().find(".shop-count").html());
+			sum += parseInt($(this).parent().parent().children(".sumPrice").html());
+		})
+		console.log(count,sum);
+		$(".clearfix").find(".count2").html(count);
+		$(".clearfix").find(".money2").html(sum);
+	}
+	
+	 //利用on实现事件委托   实现 购物车物品的数量 加减
+	 $(".clearfix").on("click",".updateCount",function(){
+	 	//alert();
+//		alert($(this).data("number"))
+		//加的时候
+			var id = $(this).parent().data("id");
+			var name = $(this).parent().data("name");
+			var price = $(this).parent().data("price");
+			var sign = $(this).data("number");
+			var shopCount = $(this).parent().children(".shop-count").html();
+			//判断为减号时  count是不是一
+			if(sign == -1 && shopCount == 1){
+//				alert();
+				return;
+			}
+			for(var i = 0 ; i < arr.length; i++){
+				if(arr[i].src == id){
+					sign == 1 ? arr[i].count++ : arr[i].count--;
+					setCookie("shoplist",JSON.stringify(arr));
+					
+					$(this).parent().children(".shop-count").html(arr[i].count);
+					$(this).parent().parent().children(".sumPrice").html(arr[i].count*arr[i].price);
+					jiesuan();
+					break;
+					
+				}
+			}
+			console.log(name,price,sign);
+		
+	 });
+	 //删除
+	  $(".clearfix").on("click",".delBtn",function(){
+
+		$(this).parent().remove();
+		var id = $(this).parent().children(".count").data("id");
+		var name = $(this).parent().children(".count").data("name");
+		for(var i = 0 ; i < arr.length; i++){
+			if(arr[i].src == id){
+				arr.splice(i,1);
+				setCookie("shoplist",JSON.stringify(arr));
+				break;
+			}
+		}
+		jiesuan();
+		console.log(id,name);
+//		alert(this.className)
+	 });
+	 
+	 //商品被选中
+	$(".ck").click(function(){
+	 	jiesuan();
+	 })
+	$("#selectAll").click(function(){
+		var pro = $(this).prop("checked");
+		$(".ck").prop("checked",pro);
+		jiesuan();
+	});
+	 console.log(arr);
+</script>
